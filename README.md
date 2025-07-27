@@ -85,6 +85,7 @@
 ```
 - config_file_path - обязательный путь к файлу конфигурации JSON
 
+### Клиент
 **Формат:**
 ```bash
 ./pgw_client <config_file_path> [IMSI]
@@ -115,6 +116,27 @@ IMSI>
 - Ввод IMSI (10-15 цифр) - отправка запроса на сервер
 - q или quit - выход из программы
 
+
+## HTTP API Endpoints
+
+| Endpoint             | Method | Parameters       | Response              | Description                          |
+|----------------------|--------|------------------|-----------------------|--------------------------------------|
+| `/health`            | GET    | -                | `{"status":"ok"}`     | Проверка работоспособности сервера   |
+| `/check_subscriber`  | GET    | `imsi` (required)| `active`/`not active` | Проверка статуса абонента по IMSI    |
+| `/stop`              | GET    | -                | `Shutting down...`    | Graceful shutdown сервера            |
+
+**Примеры:**
+```bash
+# Health check
+curl http://localhost:8080/health
+
+# Check subscriber
+curl http://localhost:8080/check_subscriber?imsi=1234567890
+
+# Stop server
+curl http://localhost:8080/stop
+```
+
 ## Запуск тестов (start_tests.sh)
 
 ### Назначение
@@ -124,3 +146,4 @@ IMSI>
 ```bash
 ./start_tests.sh
 ```
+
