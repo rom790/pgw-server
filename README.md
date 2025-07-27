@@ -128,13 +128,13 @@ IMSI>
 **Примеры:**
 ```bash
 # Health check
-curl http://localhost:8080/health
+http://localhost:8080/health
 
 # Check subscriber
-curl http://localhost:8080/check_subscriber?imsi=1234567890
+http://localhost:8080/check_subscriber?imsi=1234567890
 
 # Stop server
-curl http://localhost:8080/stop
+http://localhost:8080/stop
 ```
 
 ## Запуск тестов (start_tests.sh)
