@@ -167,7 +167,7 @@ http://localhost:8080/stop
 #### Запуск
 
 ```bash
-./client_test <config_path> [num_clients] [verbose]
+./mass_test <config_path> [num_clients] [verbose]
 ```
 #### Аргументы:
 
