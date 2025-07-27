@@ -1,0 +1,15 @@
+{
+  "udp_ip": "0.0.0.0",
+  "udp_port": 9000,
+  "session_timeout_sec": 300,
+  "cdr_file": "logs/cdr.log",
+  "http_port": 8080,
+  "graceful_shutdown_rate": 1000, 
+  "log_file": "logs/pgw_server.log",
+  "log_level": "INFO",
+  "console_output": true,
+  "blacklist": [
+    "001010123456789",
+    "001010000000001"
+  ]
+}

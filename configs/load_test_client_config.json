@@ -1,0 +1,7 @@
+{
+  "server_ip": "127.0.0.1",
+  "server_port": 9000,
+  "log_file": "",
+  "log_level": "OFF",
+  "console_output": false
+}
