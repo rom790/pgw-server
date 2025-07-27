@@ -142,6 +142,12 @@ curl http://localhost:8080/stop
 ### Назначение
 Скрипт `start_tests.sh` предназначен для автоматизации запуска unit- и integration-тестов проекта. 
 
+Перед первым использованием скрипта `start_tests.sh` необходимо дать ему права на выполнение:
+
+```bash
+chmod +x start_tests.sh
+```
+
 ### Формат запуска
 ```bash
 ./start_tests.sh
