@@ -49,7 +49,7 @@ bool SessionManager::create_session(std::string_view imsi) {
 
 bool SessionManager::session_exists(std::string_view imsi) const {
     std::shared_lock lock(sessions_mutex_);
-    return sessions_.contains(std::string(imsi));
+    return sessions_.find(std::string(imsi)) != sessions_.end();
 }
 
 void SessionManager::cleanup_expired_sessions() {
